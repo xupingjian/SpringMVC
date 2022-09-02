@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+success<br>
+<!--获取request域对象的值-->
+<p th:text="${testRequestScope}"></p>
+<!--获取session域对象的值-->
+<p th:text="${session.testSessionScope}"></p>
+<!--获取application域对象的值-->
+<p th:text="${application.testApplicationScope}"></p>
+</body>
+</html>

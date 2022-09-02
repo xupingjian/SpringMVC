@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>首页</h1>
+<a th:href="@{/hello/testRequestMapping}">测试RequestMapping注解的value属性testRequestMapping</a><br>
+<a th:href="@{/hello/test}">测试RequestMapping注解的value属性test</a><br>
+<a th:href="@{/hello/test}">测试RequestMapping注解的method属性get</a><br>
+<a th:href="@{/hello/set}">测试RequestMapping注解的扩展注解GetMapping</a><br>
+<form th:action="@{/hello/test}" method="post">
+    <input type="submit" value="测试RequestMapping注解的method属性post">
+</form><br>
+<!--form这里的method属性只能写get,post,若写其它属性则会识别为默认属性get-->
+<form th:action="@{/hello/testPut}" method="put">
+    <input type="submit" value="测试form表单是否能够发送put或delete请求">
+</form><br>
+<a th:href="@{/hello/testParamsAndHeaders(username='admin',password=123456)}">测试RequestMapping注解的params属性-->testParamsAndHeaders</a><br>
+<a th:href="@{/hello/testHeaders(username='admin',password=123456)}">测试RequestMapping注解的header属性-->testHeaders</a><br>
+<a th:href="@{/hello/aqa/testAnt}">测试RequestMapping注解的模糊查找-->testAnt</a><br>
+<a th:href="@{/hello/testpath/1/admin}">测试SpringMVC路径中的占位符常用于RESTful风格中</a>
+</body>
+</html>
